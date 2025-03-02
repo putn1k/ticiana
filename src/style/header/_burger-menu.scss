@@ -1,0 +1,125 @@
+.burger-menu {
+  display: none;
+
+  &.is-open {
+    display: block;
+
+    .burger-menu__nav {
+      @include anim(fade-burger-nav, 400ms);
+
+      animation-delay: 350ms;
+    }
+  }
+
+  &__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: var(--min-site-width);
+    z-index: 8;
+    color: var(--white);
+    background-image: url('../img/covers/burger-menu-cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border-image: fill 0 linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    padding: 110px 15px;
+    overflow-y: auto;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+      border-image: fill 0 linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+    }
+  }
+
+
+  &__bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: var(--black);
+  }
+
+  &__nav {
+    text-align: center;
+    opacity: 0;
+
+    & ul {
+      @include list-reset;
+    }
+
+    & .menu-item-has-children {
+      display: grid;
+
+      &>a {
+        display: inline-block;
+      }
+
+      & .sub-menu {
+        margin-bottom: -6px;
+
+        &>li {
+          margin-bottom: 6px;
+
+          &:first-child {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    & a {
+      color: var(--white);
+    }
+
+    &>ul {
+      border-bottom: 1px solid var(--gray-60);
+
+      &>li {
+        padding: 16px 0;
+        border-top: 1px solid var(--gray-60);
+
+        &>a {
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &__bot-wrapper {
+    height: 100%;
+
+    & ul {
+      @include list-reset;
+
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  @include media-min ($sm) {
+    &__bot-wrapper {
+
+      & ul {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

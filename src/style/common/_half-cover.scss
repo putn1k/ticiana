@@ -1,0 +1,98 @@
+.half-cover {
+  &__part {
+    padding: 24px 0;
+
+    &--decored {
+      padding-top: 64px;
+      color: var(--white);
+      background-color: var(--gray-40);
+      background-image: url('../img/covers/gray-cover.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__decor-content {
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-60);
+  }
+
+  @include media-min ($md) {
+    &__container {
+      max-width: 720px;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__container {
+      max-width: 960px;
+    }
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+
+    &__part {
+      display: flex;
+      flex-basis: 100%;
+      padding: 96px 0;
+      padding-left: 110px;
+
+      &--decored {
+        padding-left: 0;
+        padding-right: 110px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      max-width: 445px;
+
+      &--decored {
+        margin-left: auto;
+      }
+    }
+
+    &__decor-content {
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+      width: 100%;
+
+      &--end {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__part {
+      padding: 124px 0;
+      padding-left: 150px;
+
+      &--decored {
+        padding-left: 0;
+        padding-right: 150px;
+      }
+    }
+
+    &__container {
+      max-width: 645px;
+    }
+  }
+}

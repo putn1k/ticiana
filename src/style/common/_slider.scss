@@ -1,0 +1,71 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  &:not(.swiper-initialized) {
+    opacity: 0;
+  }
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+}
+
+.slider-controls {
+  width: fit-content;
+
+  &__wrapper {
+    border-radius: 99em;
+    padding: 4px;
+    border: 1px solid var(--gray-85);
+    color: var(--black);
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(2, 44px);
+    column-gap: 8px;
+  }
+
+  &__btn {
+    @include btn-reset;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--gray-85);
+
+    &.swiper-button-lock {
+      display: none;
+    }
+
+    & svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include any-hover {
+      transition:
+        color var(--duration-default) ease-in-out,
+        background-color var(--duration-default) ease-in-out,
+        border-color var(--duration-default) ease-in-out;
+
+      & svg {
+        transition: transform var(--duration-default) ease-in-out;
+      }
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--gold);
+        border-color: var(--gold);
+
+        & svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

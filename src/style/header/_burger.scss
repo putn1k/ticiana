@@ -1,0 +1,35 @@
+.burger {
+  display: inline-flex;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  color: var(--white);
+  background-color: var(--gray-40);
+  overflow: hidden;
+
+  &__icon {
+    transition: transform var(--duration-slow) ease-in-out;
+  }
+
+  &__line {
+    transform-origin: left;
+    transition: transform var(--duration-slow) ease-in-out, opacity var(--duration-slow) ease-in-out;
+  }
+
+  &.is-open &__icon {
+    transform: translateX(-1px);
+  }
+
+  &.is-open &__line--top {
+    transform: rotate(45deg) translate(-6px, -13px);
+  }
+
+  &.is-open &__line--bot {
+    transform: rotate(135deg) translate(-44px, -25px);
+  }
+
+  &.is-open &__line--mid {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}

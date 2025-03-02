@@ -1,0 +1,84 @@
+body {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background-color: var(--white);
+
+  @include media-min ($xxl) {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: var(--gold);
+  text-decoration-color: var(--link-line, transparent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: $alt-font, Georgia, 'Times New Roman', 'Lucida Bright', serif;
+}
+
+.h1 {
+  font-family: $alt-font, Georgia, 'Times New Roman', 'Lucida Bright', serif;
+  font-size: 42px;
+  line-height: 0.9;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include media-min ($xl) {
+    font-size: 48px;
+  }
+
+  @include media-min ($xxl) {
+    font-size: 64px;
+  }
+}
+
+.h2 {
+  font-family: $alt-font, Georgia, 'Times New Roman', 'Lucida Bright', serif;
+  font-size: 32px;
+  line-height: 0.9;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include media-min ($xl) {
+    font-size: 38px;
+  }
+
+  @include media-min ($xxl) {
+    font-size: 52px;
+  }
+}
+
+.h3 {
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 600;
+
+  @include media-min ($xxl) {
+    font-size: 24px;
+  }
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+}
+
+.t-sm {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+}

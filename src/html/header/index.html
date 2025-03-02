@@ -1,0 +1,62 @@
+<header class="site__header">
+  <div class="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <div class="site-header__logo">
+          <a href="page-main.html">
+            <img src="img/main-logo.png"
+                 width="110"
+                 height="50"
+                 alt="Ticiana deluxe">
+          </a>
+        </div>
+        <button class="btn-reset site-header__burger burger d-xl-none">
+          <svg class="burger__icon"
+               width="50"
+               height="50"
+               viewBox="0 0 50 50"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path class="burger__line burger__line--top"
+                  d="M14 19H36"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round" />
+            <path class="burger__line burger__line--mid"
+                  d="M14 25H36"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round" />
+            <path class="burger__line burger__line--bot"
+                  d="M14 31H36"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="d-none d-xl-flex site-header__desktop-content">
+          <nav class="site-header__nav">
+            @include('menu-list.html')
+          </nav>
+          <div class="site-header__contacts site-header__contacts--has-items">
+            @include('phone-list.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="burger-menu d-xl-none">
+    <div class="burger-menu__inner">
+      <div class="container">
+        <nav class="burger-menu__nav">
+          @include('menu-list.html')
+        </nav>
+        <div class="h3 burger-menu__bot">
+          <div class="container burger-menu__bot-wrapper">
+            @include('phone-list.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

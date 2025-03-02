@@ -1,0 +1,48 @@
+<footer class="site__footer site-footer">
+  <div class="container">
+    <div class="site-footer__logo">
+      <a href="page-main.html">
+        <img src="img/main-logo.png"
+             width="160"
+             height="75"
+             alt="Ticiana deluxe">
+      </a>
+    </div>
+    <ul class="site-footer__saloons">
+      <li>
+        <span class="h3 site-footer__saloon-adress">ул. Пушкина, 43</span>
+        <span class="h4 site-footer__alt-color">пн-сб 10:00–19:00</span>
+      </li>
+    </ul>
+    <ul class="site-footer__contacts">
+      <li><a class="h3"
+           href="tel:88412396829">8 (8412) 39-68-29</a></li>
+      <li><a class="h3"
+           href="mailto:mail@example.com">mail@example.com</a></li>
+      <li>
+        <ul class="site-footer__icon-list">
+          <li>
+            @include('../common/icon-link.html', {icon: 'tg'})
+          </li>
+          <li>
+            @include('../common/icon-link.html', {icon: 'wa'})
+          </li>
+          <li>
+            @include('../common/icon-link.html', {icon: 'vk'})
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="site-footer__copyright h4 site-footer__alt-color">
+      <span>&copy; 2024 Ticiana Deluxe. Все права защищены.</span>
+      <a href="#"
+         target="_blank"
+         rel="nofollow noreferer noopener">Политика конфиденциальности</a>
+      <a href="#"
+         target="_blank"
+         rel="nofollow noreferer noopener">Согласие об обработке персональных данных</a>
+    </div>
+  </div>
+</footer>
+@include('../common/scroll-top.html')
+@include('../modal/index.html')
