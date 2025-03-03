@@ -1,0 +1,15 @@
+.dev-info {
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+
+    & svg {
+      width: 60px;
+      height: 52px;
+      margin-left: 10px;
+    }
+  }
+}

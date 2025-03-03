@@ -11,6 +11,10 @@
       background-position: center;
       background-size: cover;
     }
+
+    &--info {
+      padding-bottom: 64px;
+    }
   }
 
   &__container {
@@ -23,9 +27,7 @@
   }
 
   &__decor-content {
-    padding: 16px;
-    border-radius: 6px;
-    border: 1px solid var(--gray-60);
+    --border-color: var(--gray-60)
   }
 
   @include media-min ($md) {
@@ -71,7 +73,6 @@
     &__decor-content {
       display: flex;
       flex-direction: column;
-      padding: 32px;
       width: 100%;
 
       &--end {

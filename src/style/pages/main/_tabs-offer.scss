@@ -1,0 +1,81 @@
+.tabs-offer {
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__control-list {
+    @include list-reset;
+    @include scrollbar($size: 0, $m-size: none);
+
+    display: flex;
+    overflow-x: auto;
+  }
+
+  &__control-btn {
+    @include btn-reset;
+
+    color: var(--gray-60);
+    padding: 10px 16px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    outline: none;
+    transition: color var(--duration-fast) ease-in-out, border-color var(--duration-fast) ease-in-out, ;
+
+    &.is-selected {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    @include any-hover {
+      &:hover {
+        color: var(--gold);
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: 24px;
+  }
+
+  &__bottom-link {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      flex-basis: 100%;
+    }
+
+    &__control-list {
+      overflow-x: visible;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__header {
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__pagination {
+      margin-top: 32px;
+    }
+  }
+}

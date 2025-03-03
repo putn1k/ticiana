@@ -59,6 +59,12 @@ const initSlider = ( name, options = {} ) => {
   return new Swiper( name, customConfig );
 };
 
+const initTabs = ( id, options = null ) => {
+  if ( !document.querySelector( `[data-jtabs="${id}"]` ) ) return;
+
+  new JustTabs( id, options );
+};
+
 const disableSubmitBtn = ( form ) => {
   if ( !form.querySelector( '[type="submit"]' ) ) return;
   form.querySelector( '[type="submit"]' ).setAttribute( 'disabled', 'disabled' );
@@ -100,6 +106,7 @@ export {
   lockScroll,
   unlockScroll,
   initSlider,
+  initTabs,
   initModal,
   sendData
 };

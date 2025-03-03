@@ -34,3 +34,13 @@ input[type='file'].visually-hidden {
     overflow: visible;
   }
 }
+
+.bordered-content {
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color, var(--gray-85));
+
+  @include media-min ($xl) {
+    padding: 32px;
+  }
+}

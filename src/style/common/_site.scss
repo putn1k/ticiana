@@ -13,7 +13,23 @@
     flex-grow: 1;
   }
 
+  &__section {
+    padding: 64px 0;
+  }
+
   &__footer {
     flex-shrink: 0;
+  }
+
+  @include media-min ($xl) {
+    &__section {
+      padding: 96px 0;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__section {
+      padding: 124px 0;
+    }
   }
 }
