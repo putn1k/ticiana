@@ -8,6 +8,9 @@ import {
   initSliders
 } from './modules/slider.js';
 import {
+  initAllTabs
+} from './modules/tabs.js';
+import {
   validateForms
 } from './modules/validate.js';
 
@@ -18,5 +21,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     validateForms();
     initModals();
     initSliders();
+    initAllTabs();
   } );
 } );

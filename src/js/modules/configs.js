@@ -3,7 +3,32 @@ const sliderConfig = {
     slidesPerView: 1,
     spaceBetween: 30,
     watchSlidesProgress: true,
+    navigation: {
+      prevEl: '[data-to-slide="prev"]',
+      nextEl: '[data-to-slide="next"]',
+    },
   },
+  hero: {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+  },
+  gallery: {
+    slidesPerView: 1.4,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.4,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
+      },
+    },
+  }
 };
 
 const smoothScrollConfig = {

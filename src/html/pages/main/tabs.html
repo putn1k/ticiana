@@ -1,0 +1,39 @@
+<section class="site__section">
+  <div class="container">
+    <div class="tabs-offer"
+         data-jtabs="offers">
+      <header class="tabs-offer__header">
+        <h2 class="h2 tabs-offer__title">Каталог декоративных покрытий</h2>
+        <ul class="tabs-offer__control-list"
+            data-jtabs="nav">
+          <li>
+            <button class="tabs-offer__control-btn"
+                    type="button"
+                    data-jtabs="control">Хиты продаж</button>
+          </li>
+          <li>
+            <button class="tabs-offer__control-btn"
+                    type="button"
+                    data-jtabs="control">Новинки</button>
+          </li>
+          <li>
+            <button class="tabs-offer__control-btn"
+                    type="button"
+                    data-jtabs="control">Распродажа</button>
+          </li>
+        </ul>
+        <a class="btn btn--alt tabs-offer__link d-none d-md-inline-flex"
+           href="page-catalog.html">Смотреть все</a>
+      </header>
+      <div>
+        @include('offer-slider.html', {title: 'Хиты продаж', id: 'offer-hits'})
+        @include('offer-slider.html', {title: 'Новинки', id: 'offer-news'})
+        @include('offer-slider.html', {title: 'Распродажа', id: 'offer-sales'})
+      </div>
+      <div class="tabs-offer__bottom-link d-md-none">
+        <a class="btn btn--alt"
+           href="page-catalog.html">Смотреть все</a>
+      </div>
+    </div>
+  </div>
+</section>
