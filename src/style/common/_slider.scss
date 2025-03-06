@@ -1,4 +1,6 @@
 .slider {
+  --swiper-height: auto;
+
   position: relative;
   overflow: hidden;
   opacity: 1;
@@ -10,6 +12,41 @@
 
   &__wrapper {
     box-sizing: border-box;
+  }
+
+  &__head {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__pagination {
+    margin-top: 24px;
+  }
+
+  &__bottom-link {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__head {
+      margin-bottom: 32px;
+    }
+
+    &__pagination {
+      margin-top: 32px;
+    }
   }
 }
 

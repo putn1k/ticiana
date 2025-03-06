@@ -1,15 +1,41 @@
 .dev-info {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &:focus-within {
+    --link-line: currentColor;
+  }
+
   &__link {
     display: inline-flex;
     align-items: center;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
+    padding-right: 6px;
 
-    & svg {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
       width: 60px;
       height: 52px;
-      margin-left: 10px;
+      transform: translateY(-50%);
     }
+
+    @include any-hover {
+      transition: text-decoration-color var(--duration-default) ease-in-out;
+
+      &:hover {
+        --link-line: currentColor;
+      }
+    }
+  }
+
+  &__icon {
+    width: 60px;
+    height: 52px;
   }
 }

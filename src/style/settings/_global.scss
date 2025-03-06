@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   min-width: var(--min-site-width);
   -webkit-tap-highlight-color: transparent;
 }

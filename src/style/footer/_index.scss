@@ -1,4 +1,139 @@
 .site-footer {
   color: var(--white);
   background-color: var(--black);
+
+  &__top {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 64px;
+
+    & a {
+      filter: grayscale(1);
+      opacity: 0.4;
+
+      @include any-hover {
+        transition: filter var(--duration-default) ease-in-out, opacity var(--duration-default) ease-in-out;
+
+        &:hover {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__saloons {
+    @include list-reset;
+
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+
+    & li {
+      display: grid;
+      row-gap: 6px;
+    }
+  }
+
+  &__alt-color {
+    color: var(--gray-40);
+  }
+
+  &__contacts {
+    @include list-reset;
+
+    display: grid;
+    justify-items: center;
+    row-gap: 24px;
+
+    & a {
+      color: inherit;
+
+      @include any-hover {
+        transition: color var(--duration-default) ease-in-out, text-decoration-color var(--duration-default) ease-in-out;
+
+        &:hover {
+          --link-line: currentColor;
+
+          color: var(--gold)
+        }
+      }
+    }
+  }
+
+  &__icon-list {
+    @include list-reset;
+
+    display: flex;
+    margin: -6px;
+
+    &>li {
+      margin: 6px;
+    }
+  }
+
+  &__policy {
+    --link-line: currentColor;
+
+    color: inherit;
+
+    @include any-hover {
+      transition: color var(--duration-default) ease-in-out;
+
+      &:hover {
+        color: var(--gray-60);
+      }
+    }
+  }
+
+  &__dev {
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    &__policy-wrapper {
+      text-align: right;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__saloons {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 0;
+
+      & li {
+        padding-left: 16px;
+        border-left: 1px solid var(--gray-40);
+      }
+    }
+
+    &__policy-wrapper {
+      text-align: center;
+    }
+
+    &__dev {
+      text-align: right;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__saloons {
+      display: flex;
+      gap: 0;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+
+      &>li {
+        margin-left: 30px;
+      }
+    }
+  }
 }

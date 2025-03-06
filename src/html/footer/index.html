@@ -1,59 +1,77 @@
 <footer class="site__footer site-footer">
   <div class="container">
-    <div class="site-footer__logo">
-      <a href="page-main.html">
-        <img src="img/main-logo.png"
-             width="160"
-             height="75"
-             alt="Ticiana deluxe">
-      </a>
-    </div>
-    <ul class="site-footer__saloons">
-      <li>
-        <span class="h3 site-footer__saloon-adress">ул. Пушкина, 43</span>
-        <span class="h4 site-footer__alt-color">пн-сб 10:00–19:00</span>
-      </li>
-    </ul>
-    <ul class="site-footer__contacts">
-      <li><a class="h3"
-           href="tel:88412396829">8 (8412) 39-68-29</a></li>
-      <li><a class="h3"
-           href="mailto:mail@example.com">mail@example.com</a></li>
-      <li>
-        <ul class="site-footer__icon-list">
+    <div class="row site-footer__top">
+      <div class="col-12 col-xl-3 col-xxl-2">
+        <div class="site-footer__logo">
+          <a href="page-main.html">
+            <img src="img/light-logo.png"
+                 width="160"
+                 height="75"
+                 alt="Ticiana deluxe">
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xxl-8">
+        <ul class="site-footer__saloons">
           <li>
-            @include('../common/icon-link.html', {icon: 'tg'})
+            <span class="h3 site-footer__saloon-adress">ул. Пушкина, 43</span>
+            <span class="h4 site-footer__alt-color">пн-сб 10:00–19:00</span>
           </li>
           <li>
-            @include('../common/icon-link.html', {icon: 'wa'})
+            <span class="h3 site-footer__saloon-adress">ул. Пушкина, 43</span>
+            <span class="h4 site-footer__alt-color">пн-сб 10:00–19:00</span>
           </li>
           <li>
-            @include('../common/icon-link.html', {icon: 'vk'})
+            <span class="h3 site-footer__saloon-adress">ул. Пушкина, 43</span>
+            <span class="h4 site-footer__alt-color">пн-сб 10:00–19:00</span>
+          </li>
+          <li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3 col-xxl-2">
+        <ul class="site-footer__contacts">
+          <li><a class="h3"
+               href="tel:88412396829">8 (8412) 39-68-29</a></li>
+          <li><a class="h3"
+               href="mailto:mail@example.com">mail@example.com</a></li>
+          <li>
+            <ul class="site-footer__icon-list">
+              <li>
+                @include('../common/icon-link.html', {icon: 'tg'})
+              </li>
+              <li>
+                @include('../common/icon-link.html', {icon: 'wa'})
+              </li>
+              <li>
+                @include('../common/icon-link.html', {icon: 'vk'})
+              </li>
+            </ul>
           </li>
         </ul>
-      </li>
-    </ul>
-    <div class="site-footer__copyright h4 site-footer__alt-color">
-      <span>&copy; 2024 Ticiana Deluxe. Все права защищены.</span>
-      <a href="#"
-         target="_blank"
-         rel="nofollow noreferer noopener">Политика конфиденциальности</a>
-      <a href="#"
-         target="_blank"
-         rel="nofollow noreferer noopener">Согласие об обработке персональных данных</a>
+      </div>
     </div>
-    <div class="site-footer__dev">
-      <span class="dev-info">
-        <a class="dev-info__link"
-           href="#">
-          <span>Mindal</span>
-          <svg width="60"
+    <div class="row site-footer__alt-color py-4 align-items-xl-center">
+      <div class="col-12 col-md-6 col-xl-4 mb-4 mb-xl-0">
+        <span>&copy; 2024 Ticiana Deluxe. Все права защищены.</span>
+      </div>
+      <div class="col-12 col-md-6 col-xl-5 mb-4 mb-xl-0 site-footer__policy-wrapper">
+        <a class="site-footer__policy"
+           href="#"
+           target="_blank"
+           rel="nofollow noreferer noopener">Политика конфиденциальности</a>
+      </div>
+      <div class="col-12 col-xl-3 site-footer__dev">
+        <span class="dev-info">
+          <a class="dev-info__link"
+             href="#">Mindal</a>
+          <svg class="dev-info__icon"
+               width="60"
                height="52"
                aria-hidden="true">
             <use xlink:href="img/sprite.svg#almond"></use>
           </svg>
-        </a>
-      </span>
+        </span>
+      </div>
     </div>
   </div>
 </footer>

@@ -1,0 +1,82 @@
+.presentation {
+  color: var(--white);
+  background-color: var(--gray-40);
+
+  &__decor {
+    display: grid;
+    column-gap: 8px;
+    row-gap: 16px;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: repeat(12, var(--decor-ratio, 2px));
+    margin-bottom: 24px;
+    user-select: none;
+    pointer-events: none;
+
+    &>* {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+
+      &:nth-child(5n+1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 6;
+      }
+
+      &:nth-child(5n+2) {
+        grid-column: 1 / 2;
+        grid-row: 6 / 13;
+      }
+
+      &:nth-child(5n+3) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 13;
+      }
+
+      &:nth-child(5n+4) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 8;
+      }
+
+      &:nth-child(5n+5) {
+        grid-column: 3 / 4;
+        grid-row: 8 / 13;
+      }
+    }
+
+    & img {
+      @include full-size;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  @include media-min ($md) {
+    --decor-ratio: 10px;
+  }
+
+  @include media-min ($xl) {
+    --decor-ratio: 15px;
+
+    &__decor {
+      margin-bottom: 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 24px;
+    }
+
+    &__info {
+      height: 100%;
+    }
+  }
+}

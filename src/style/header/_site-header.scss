@@ -17,22 +17,6 @@
   }
 
   &__logo {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      width: 120%;
-      height: 120%;
-      left: -10%;
-      top: -10%;
-      z-index: 1;
-      pointer-events: none;
-      background-image: radial-gradient(rgba(142, 142, 142, 0.7), transparent 60%);
-      background-position: top -5px center;
-    }
-
     & a {
       display: flex;
     }

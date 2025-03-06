@@ -5,9 +5,10 @@
   width: 100%;
   color: inherit;
   background-color: transparent;
-  border: 1px solid var(--input-border-color, var(--gray-60, currentColor));
+  border: 1px solid var(--input-border-color, var(--gray-85, currentColor));
   border-radius: 99em;
   appearance: none;
+  outline: none;
 
   &:-webkit-autofill,
   &:-webkit-autofill:focus {
@@ -15,11 +16,96 @@
   }
 
   &.is-invalid {
-    border-color: var(--error-color, #BD0300);
+    color: var(--error, #bd0300);
+    border-color: var(--error, #bd0300);
+    box-shadow: 0 0 0 4px rgba(189, 3, 0, 0.3) inset;
   }
 
   &--area {
     resize: none;
     height: var(--input-area-height, 6em);
+  }
+
+  &:not(:placeholder-shown) {
+    --input-border-color: var(--gray-60);
+  }
+
+  &.focus-visible {
+    --input-border-color: var(--gold);
+  }
+}
+
+.form {
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  &__fields {
+    display: grid;
+    row-gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+
+  @include media-min ($sm) {
+    &__submit {
+      width: auto;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__fields {
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.form-checkbox {
+  cursor: pointer;
+
+  &>input {
+    &+span {
+      position: relative;
+      color: var(--gray-60);
+      font-weight: 400;
+      padding-left: 1.5em;
+
+      & a {
+        --link-line: currentColor;
+
+        color: inherit;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border-radius: 4px;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.36385 0.865469L3.44224 5.78709C3.39937 5.8301 3.34843 5.86423 3.29235 5.88752C3.23627 5.91081 3.17614 5.9228 3.11541 5.9228C3.05468 5.9228 2.99455 5.91081 2.93847 5.88752C2.88239 5.86423 2.83145 5.8301 2.78858 5.78709L0.635376 3.63388C0.592456 3.59096 0.558411 3.54001 0.535183 3.48393C0.511955 3.42785 0.5 3.36775 0.5 3.30705C0.5 3.24636 0.511955 3.18625 0.535183 3.13018C0.558411 3.0741 0.592456 3.02315 0.635376 2.98023C0.678295 2.93731 0.729248 2.90326 0.785325 2.88003C0.841402 2.85681 0.901505 2.84485 0.962202 2.84485C1.0229 2.84485 1.083 2.85681 1.13908 2.88003C1.19516 2.90326 1.24611 2.93731 1.28903 2.98023L3.11579 4.80699L7.71097 0.212585C7.79765 0.125906 7.91521 0.0772095 8.0378 0.0772095C8.16038 0.0772095 8.27794 0.125906 8.36462 0.212585C8.4513 0.299265 8.5 0.416828 8.5 0.539412C8.5 0.661995 8.4513 0.779558 8.36462 0.866238L8.36385 0.865469Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 0.75em auto;
+        border: 1px solid var(--gray-85);
+      }
+    }
+
+    &:checked {
+      &+span {
+        &::before {
+          background-color: var(--gold);
+          border-color: var(--gold);
+        }
+      }
+    }
   }
 }

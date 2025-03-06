@@ -11,6 +11,8 @@ const initSliders = () => {
   initSlider( '#offer-hits', sliderConfig.gallery );
   initSlider( '#offer-news', sliderConfig.gallery );
   initSlider( '#offer-sales', sliderConfig.gallery );
+  initSlider( '#complete-projects', sliderConfig.gallery );
+  initSlider( '#our-testimonials', sliderConfig.galleryBig );
 };
 
 export {

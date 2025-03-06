@@ -1,0 +1,121 @@
+.workplan {
+  &__top {
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--gray-60)
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: grid;
+    gap: 32px;
+    counter-reset: workplan;
+  }
+
+  &__item {
+    position: relative;
+    display: list-item;
+    counter-increment: workplan;
+    padding-left: 53px;
+
+    &::before {
+      content: '0'counter(workplan);
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gray-85);
+      font-family: $alt-font, Georgia, 'Times New Roman', 'Lucida Bright', serif;
+      font-size: 42px;
+      line-height: 0.9;
+      font-weight: 400;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  @include media-min ($xl) {
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--gray-85);
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__descr {
+      flex-basis: 100%;
+      max-width: 650px;
+      text-align: right;
+    }
+
+    &__list {
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+      row-gap: 65px;
+    }
+
+    &__item {
+      padding-left: 0;
+      padding-top: 70px;
+      width: 100%;
+      grid-column: span 6;
+
+      &:nth-child(12n+1),
+      &:nth-child(12n+2),
+      &:nth-child(12n+3) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(12n+1) {
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -33px;
+          left: 0;
+          width: calc(300% + 60px);
+          height: 1px;
+          background-color: var(--gray-85);
+        }
+      }
+
+      &::before {
+        font-size: 48px;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__item {
+      padding-top: 82px;
+
+      &:nth-child(12n+4) {
+        grid-column: 3 / span 4;
+      }
+
+      &:nth-child(12n+5) {
+        grid-column: span 4;
+      }
+
+      &::before {
+        font-size: 64px;
+      }
+    }
+  }
+}

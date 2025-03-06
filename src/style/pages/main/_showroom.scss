@@ -1,0 +1,92 @@
+.showroom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  min-width: 250px;
+  min-height: 250px;
+  flex-shrink: 0;
+
+  &__header {
+    margin-bottom: 26px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--gray-85);
+  }
+
+  &__schedule {
+    margin: 0;
+    color: var(--gray-60);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    &>* {
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
+    & a {
+      --link-line: currentColor;
+
+      color: inherit;
+
+      @include any-hover {
+        transition: color var(--duration-default) ease-in-out;
+
+        &:hover {
+          color: var(--gold);
+        }
+      }
+    }
+  }
+
+  &__icon-list {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+
+    &>li {
+      &:not(:first-child) {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__header {
+      margin-bottom: 0;
+    }
+
+    &__icon-list {
+      &>li {
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding: 14px;
+
+    &__header {
+      margin-bottom: 26px;
+    }
+  }
+}

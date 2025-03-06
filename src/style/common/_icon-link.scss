@@ -1,0 +1,27 @@
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--icon-padding, 13px);
+  background-color: var(--icon-bg, var(--white));
+  border: 1px solid var(--icon-border, var(--gray-85));
+  border-radius: 50%;
+  overflow: hidden;
+
+  & svg {
+    width: var(--icon-size, 16px);
+    height: var(--icon-size, 16px);
+  }
+
+  @include any-hover {
+    & svg {
+      transition: transform var(--duration-default) ease-in-out;
+    }
+
+    &:hover {
+      & svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

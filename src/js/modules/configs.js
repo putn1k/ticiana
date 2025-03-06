@@ -28,7 +28,21 @@ const sliderConfig = {
         slidesPerView: 4,
       },
     },
-  }
+  },
+  galleryBig: {
+    slidesPerView: 1.5,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5,
+      },
+      1024: {
+        slidesPerView: 4.5,
+      },
+      1440: {
+        slidesPerView: 6,
+      },
+    },
+  },
 };
 
 const smoothScrollConfig = {
