@@ -1,0 +1,17 @@
+<header class="header-page@if(context.cover && context.cover != '@cover'){ header-page--covered}"
+        @if(context.cover
+        &&
+        context.cover
+        !='@cover'
+        ){style="--bg-url: url(../img/mock/@cover.jpg);"
+        }>
+  <div class="container">
+    <nav class="header-page__bc">
+      <div typeof="BreadcrumbList"
+           vocab="https://schema.org/">
+        @bc<span>@page</span>
+      </div>
+    </nav>
+    <h1 class="h1 m-0">@page</h1>
+  </div>
+</header>

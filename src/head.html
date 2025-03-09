@@ -12,3 +12,6 @@
   <div class="site__container">
     @include('html/header/index.html')
     <main class="site__content">
+      @if(context.page !== 'main') {
+      @include('html/common/header-page.html', {page: '@title', bc: '@bc', cover: '@cover' })
+      }

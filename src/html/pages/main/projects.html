@@ -8,50 +8,11 @@
            href="page-projects.html">Смотреть все</a>
       </header>
       <div class="slider__wrapper swiper-wrapper">
-        <section class="swiper-slide product-card">
-          <div class="product-card__img">
-            <img src="img/mock/project.jpg"
-                 alt="">
-          </div>
-          <h3 class="product-card__title">Выполненный проект</h3>
-          <p class="product-card__text">Декоративная штукатурка на акриловой основе с добавлением целлюлозных волокон для внутренних работ. Благодаря своей пластичности позволяет создавать покрытия, имитирующие саман, дикий камень, известняк и многие другие природные фактуры. Входящие в состав целлюлозные волокна обеспечивают особо прочную рельефную поверхность.</p>
-          <a class="product-card__link"
-             href="page-project.html"
-             aria-label="Выполненный проект"></a>
-        </section>
-        <section class="swiper-slide product-card">
-          <div class="product-card__img">
-            <img src="img/mock/project.jpg"
-                 alt="">
-          </div>
-          <h3 class="product-card__title">Выполненный проект</h3>
-          <p class="product-card__text">Декоративная штукатурка на акриловой основе с добавлением целлюлозных волокон для внутренних работ. Благодаря своей пластичности позволяет создавать покрытия, имитирующие саман, дикий камень, известняк и многие другие природные фактуры. Входящие в состав целлюлозные волокна обеспечивают особо прочную рельефную поверхность.</p>
-          <a class="product-card__link"
-             href="page-project.html"
-             aria-label="Выполненный проект"></a>
-        </section>
-        <section class="swiper-slide product-card">
-          <div class="product-card__img">
-            <img src="img/mock/project.jpg"
-                 alt="">
-          </div>
-          <h3 class="product-card__title">Выполненный проект</h3>
-          <p class="product-card__text">Декоративная штукатурка на акриловой основе с добавлением целлюлозных волокон для внутренних работ. Благодаря своей пластичности позволяет создавать покрытия, имитирующие саман, дикий камень, известняк и многие другие природные фактуры. Входящие в состав целлюлозные волокна обеспечивают особо прочную рельефную поверхность.</p>
-          <a class="product-card__link"
-             href="page-project.html"
-             aria-label="Выполненный проект"></a>
-        </section>
-        <section class="swiper-slide product-card">
-          <div class="product-card__img">
-            <img src="img/mock/project.jpg"
-                 alt="">
-          </div>
-          <h3 class="product-card__title">Выполненный проект</h3>
-          <p class="product-card__text">Декоративная штукатурка на акриловой основе с добавлением целлюлозных волокон для внутренних работ. Благодаря своей пластичности позволяет создавать покрытия, имитирующие саман, дикий камень, известняк и многие другие природные фактуры. Входящие в состав целлюлозные волокна обеспечивают особо прочную рельефную поверхность.</p>
-          <a class="product-card__link"
-             href="page-project.html"
-             aria-label="Выполненный проект"></a>
-        </section>
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
       </div>
       <div class="slider__pagination decorated-pagination">
         @include('../../common/slider-control.html')
