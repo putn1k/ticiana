@@ -1,0 +1,120 @@
+.video-card {
+  position: relative;
+  width: 250px;
+
+  &::before {
+    content: '';
+    pointer-events: none;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 134px;
+    border-radius: 6px;
+    background-color: var(--gold);
+  }
+
+  @include any-hover {
+    &:hover {
+      --title-color: var(--gold);
+      --poster-opacity: 0.4;
+      --play-opacity: 1;
+    }
+  }
+
+  &__poster {
+    display: block;
+    width: 100%;
+    height: 134px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    opacity: var(--poster-opacity, 1);
+    transition: opacity var(--duration-default) ease-in-out;
+  }
+
+  &__title {
+    color: var(--title-color, inherit);
+    margin: 0;
+    font-weight: 600;
+    font-family: $main-font, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color var(--duration-default) ease-in-out;
+  }
+
+  &__trigger {
+    @include btn-reset;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 43px;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      margin-left: -24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.333333' y='0.666341' width='46' height='46' rx='23' stroke='%23E7D7B3' stroke-width='0.666667'/%3E%3Cpath d='M32.6009 22.5954C33.5771 22.9848 33.5771 24.3488 32.6009 24.7382L14.9426 31.7815C14.173 32.0884 13.333 31.5294 13.333 30.7101L13.333 16.6235C13.333 15.8042 14.173 15.2452 14.9426 15.5521L32.6009 22.5954Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      pointer-events: none;
+    }
+
+    &::after {
+      @include full-size;
+
+      content: '';
+    }
+  }
+
+  @include media-min ($xl) {
+    width: 255px;
+
+    &::before {
+      height: 150px;
+    }
+
+    &__poster {
+      height: 150px;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__trigger {
+      &::before {
+        top: 52px;
+        opacity: var(--play-opacity, 0);
+        transition: opacity var(--duration-default) ease-in-out;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    width: 375px;
+
+    &::before {
+      height: 200px;
+    }
+
+    &__poster {
+      height: 200px;
+    }
+
+    &__trigger {
+      &::before {
+        top: 75px;
+      }
+    }
+  }
+}

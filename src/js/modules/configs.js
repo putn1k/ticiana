@@ -43,6 +43,28 @@ const sliderConfig = {
       },
     },
   },
+  product: {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    effect: 'fade',
+    speed: 600,
+    fadeEffect: {
+      crossFade: true,
+    },
+  },
+  productThumbs: {
+    slidesPerView: 6,
+    spaceBetween: 8,
+    navigation: {
+      enabled: false
+    },
+    breakpoints: {
+      1440: {
+        slidesPerView: 8,
+      },
+    },
+  },
 };
 
 const smoothScrollConfig = {

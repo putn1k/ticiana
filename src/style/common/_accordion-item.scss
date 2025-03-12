@@ -1,0 +1,59 @@
+.accordion-item {
+  border: 1px solid var(--gray-85);
+  border-radius: 6px;
+  transition: background-color var(--duration-default) ease-in-out;
+
+  &[open] {
+    --rotate-acc-arrow: 180deg;
+    --title-color: var(--gold);
+
+    background-color: var(--gold-15);
+  }
+
+  &__title {
+    position: relative;
+    list-style: none;
+    padding: 16px;
+    padding-right: 56px;
+    color: var(--title-color, inherit);
+    transition: color var(--duration-default) ease-in-out;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.03021 8.96976C4.96052 8.90008 4.8778 8.8448 4.78675 8.80709C4.69571 8.76938 4.59813 8.74997 4.49958 8.74997C4.40104 8.74997 4.30345 8.76938 4.21241 8.80709C4.12136 8.8448 4.03864 8.90008 3.96896 8.96976C3.89927 9.03944 3.844 9.12217 3.80629 9.21321C3.76858 9.30426 3.74916 9.40184 3.74916 9.50039C3.74916 9.59893 3.76858 9.69651 3.80629 9.78756C3.844 9.8786 3.89927 9.96133 3.96896 10.031L11.469 17.531C11.5386 17.6007 11.6213 17.6561 11.7124 17.6938C11.8034 17.7315 11.901 17.751 11.9996 17.751C12.0981 17.751 12.1957 17.7315 12.2868 17.6938C12.3778 17.6561 12.4606 17.6007 12.5302 17.531L20.0302 10.031C20.1709 9.89028 20.25 9.69941 20.25 9.50039C20.25 9.30136 20.1709 9.11049 20.0302 8.96976C19.8895 8.82903 19.6986 8.74997 19.4996 8.74997C19.3006 8.74997 19.1097 8.82903 18.969 8.96976L11.9996 15.9401L5.03021 8.96976Z' fill='%235B5B5B'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px 24px;
+      transform: rotate(var(--rotate-acc-arrow, 0));
+      transition: transform var(--duration-default) ease-in-out;
+    }
+  }
+
+  &__content {
+    @include crop-offset;
+
+    padding: 16px;
+    padding-top: 0;
+  }
+
+  @include media-min ($xl) {
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__content {
+      padding-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.product-meta {
+  padding-bottom: 64px;
+
+  &__descr {
+    @include crop-offset;
+
+    & p {
+      margin: 0.75em 0;
+    }
+
+    margin-bottom: 24px;
+  }
+
+  &__accordion {
+    display: grid;
+    row-gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    margin-bottom: 8px;
+  }
+
+  &__note {
+    color: var(--gray-60);
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  @include media-min ($xl) {
+    &__descr {
+      margin-bottom: 48px;
+    }
+
+    &__info {
+      width: 100%;
+      max-width: 83.33%;
+      padding: 18px 24px;
+      border: 1px solid var(--gray-85);
+      border-radius: 6px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 96px;
+  }
+}

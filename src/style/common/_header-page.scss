@@ -1,4 +1,6 @@
 .header-page {
+  display: flex;
+  align-items: flex-end;
   color: var(--black);
   background-color: var(--white);
   min-height: 256px;

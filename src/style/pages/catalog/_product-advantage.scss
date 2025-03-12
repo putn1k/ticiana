@@ -1,0 +1,30 @@
+.product-advantage {
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-85);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include crop-offset;
+
+    color: var(--gray-40);
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+
+    &__title {
+      flex-basis: 100%;
+      margin-bottom: 0;
+      padding-right: 15px;
+    }
+
+    &__text {
+      flex-basis: 100%;
+      padding-left: 15px;
+    }
+  }
+}

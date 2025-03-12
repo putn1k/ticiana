@@ -1,0 +1,51 @@
+.product-gallery {
+  &__main {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  &__photo {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+
+    & img {
+      @include full-size;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    z-index: 1;
+  }
+
+  &__thumb {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 15%;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+
+    & img {
+      @include full-size;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__main {
+      margin-bottom: 24px;
+    }
+
+    &__thumb {
+      padding-bottom: 11%;
+    }
+  }
+}

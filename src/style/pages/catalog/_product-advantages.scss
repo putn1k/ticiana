@@ -1,0 +1,26 @@
+.product-advantages {
+  padding-bottom: 64px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    color: var(--gray-60);
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: grid;
+    gap: 30px;
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 96px;
+  }
+}

@@ -1,0 +1,21 @@
+.descr-props {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-85);
+    padding-bottom: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__key {
+    color: var(--gray-60);
+  }
+
+  &__value {
+    margin-left: 0;
+  }
+}

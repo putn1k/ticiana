@@ -1,0 +1,48 @@
+.descr-file-list {
+  @include list-reset;
+
+  display: grid;
+  row-gap: 24px;
+
+  &__item {
+    position: relative;
+    padding: 10px 0;
+    padding-right: 70px;
+
+    & a {
+      color: inherit;
+
+      @include any-hover {
+        transition:
+          color var(--duration-default) ease-in-out;
+
+        &:hover {
+          color: var(--gold);
+        }
+      }
+    }
+  }
+
+  &__name {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &__size {
+    display: block;
+    color: var(--gray-60);
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+  }
+}

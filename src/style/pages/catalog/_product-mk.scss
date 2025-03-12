@@ -1,0 +1,43 @@
+.product-mk {
+  padding-bottom: 64px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    color: var(--gray-60);
+  }
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    overflow-x: auto;
+  }
+
+  &__item {
+    margin-right: 16px;
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__list {
+      @include list-reset;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      overflow-x: visible;
+    }
+
+    &__item {
+      margin-right: 0;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 96px;
+  }
+}
