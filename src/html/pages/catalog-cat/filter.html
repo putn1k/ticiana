@@ -1,0 +1,86 @@
+<section class="product-filter">
+  <h3 class="visually-hidden">Фильтры</h3>
+  <button class="btn btn--alt product-filter__btn d-lg-none"
+          type="button">
+    <span>Фильтры</span>
+    <svg width="11"
+         height="11"
+         aria-hidden="true">
+      <use xlink:href="img/sprite.svg#filters"></use>
+    </svg>
+  </button>
+  <form class="product-filter__form filter-form">
+    <input type="hidden"
+           name="cat-id"
+           value="Декоративные покрытия">
+    <div class="filter-form__wrapper">
+      <div class="filter-form__content">
+        <button class="filter-form__close"
+                type="button"
+                aria-label="Закрыть окно">
+          <svg width="16"
+               height="16"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="h2 d-lg-none"
+             aria-hidden="true">Фильтры</div>
+        <fieldset class="filter-form__set">
+          <legend class="filter-form__legend">Степень блеска</legend>
+          <div class="filter-dropdown">
+            <button class="btn btn--alt filter-dropdown__btn"
+                    type="button">Степень блеска</button>
+            <div class="filter-dropdown__list">
+              @include('../../common/filter-checkbox.html', {title: 'Матовый', name: 'product-gloss'})
+              @include('../../common/filter-checkbox.html', {title: 'Матовый', name: 'product-gloss'})
+              @include('../../common/filter-checkbox.html', {title: 'Матовый', name: 'product-gloss'})
+              @include('../../common/filter-checkbox.html', {title: 'Матовый', name: 'product-gloss'})
+              @include('../../common/filter-checkbox.html', {title: 'Матовый', name: 'product-gloss', isHide: true})
+              <button class="filter-dropdown__more"
+                      data-more
+                      type="button">Показать все</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter-form__set">
+          <legend class="filter-form__legend">Фактура</legend>
+          <div class="filter-dropdown">
+            <button class="btn btn--alt filter-dropdown__btn"
+                    type="button">Фактура</button>
+            <div class="filter-dropdown__list">
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture'})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture'})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture'})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture'})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture', isHide: true})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture', isHide: true})
+              @include('../../common/filter-checkbox.html', {title: 'Бархат', name: 'product-texture', isHide: true})
+              <button class="filter-dropdown__more"
+                      data-more
+                      type="button">Показать все</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter-form__set">
+          <legend class="filter-form__legend">Стиль интерьера</legend>
+          <div class="filter-dropdown">
+            <button class="btn btn--alt filter-dropdown__btn"
+                    type="button">Стиль интерьера</button>
+            <div class="filter-dropdown__list">
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style'})
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style'})
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style'})
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style'})
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style', isHide: true})
+              @include('../../common/filter-checkbox.html', {title: 'Неоклассика', name: 'product-interior-style', isHide: true})
+              <button class="filter-dropdown__more"
+                      data-more
+                      type="button">Показать все</button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+</section>

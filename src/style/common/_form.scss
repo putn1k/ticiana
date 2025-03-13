@@ -109,3 +109,42 @@
     }
   }
 }
+
+.filter-checkbox {
+  cursor: pointer;
+
+  &>input {
+    &+span {
+      position: relative;
+      color: var(--gray-40);
+      font-weight: 600;
+      padding-left: 1.5em;
+      user-select: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: 1px solid var(--gray-85);
+      }
+    }
+
+    &:checked {
+      &+span {
+        color: var(--black);
+
+        &::before {
+          background-color: var(--gold);
+          border-color: var(--gold);
+          box-shadow: 0 0 0 0.16em #ffffff inset;
+        }
+      }
+    }
+  }
+}

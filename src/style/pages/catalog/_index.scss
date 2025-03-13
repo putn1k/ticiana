@@ -3,44 +3,7 @@
 @import "product-advantages";
 @import "product-advantage";
 @import "product-mk";
-
-.catalog-back-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 16px;
-  color: var(--gray-60);
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 100%;
-    left: 0;
-    height: 1px;
-    background-image: linear-gradient(90deg, rgba(218, 218, 218, 0) 0%, #DADADA 50%, rgba(218, 218, 218, 0) 100%);
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-  }
-
-  @include any-hover {
-    transition: color var(--duration-defaut) ease-in-out;
-
-    &:hover {
-      color: var(--gold);
-    }
-  }
-
-  & svg {
-    margin-right: 10px;
-  }
-}
+@import "catalog-back-link";
+@import "product-filter";
+@import "filter-form";
+@import "filter-dropdown";
