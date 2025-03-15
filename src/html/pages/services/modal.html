@@ -1,0 +1,68 @@
+<div class="hystmodal"
+     id="order-service-modal"
+     aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window"
+         role="dialog"
+         aria-modal="true">
+      <div class="modal">
+        <button class="modal__close"
+                type="button"
+                aria-label="Закрыть окно"
+                data-hystclose>
+          <svg class="modal__close-icon"
+               width="24"
+               height="24"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <section class="service-modal">
+          <img class="service-modal__img"
+               src="#"
+               id="service-modal-image"
+               alt="">
+          <div>
+            <h3 class="h2 service-modal__title">Заказ услуги:</h3>
+            <p class="h3 service-modal__subtitle"
+               id="service-modal-display"></p>
+            <form class="form"
+                  id="order-service-form"
+                  data-validate>
+              <input type="hidden"
+                     name="Форма"
+                     value="Заказать услугу">
+              <input type="hidden"
+                     id="service-modal-input"
+                     name="Услуга"
+                     value="">
+              <div class="form__fields">
+                <div>
+                  <input class="form-input"
+                         name="Имя"
+                         type="text"
+                         placeholder="Ваше имя"
+                         data-validate="name"
+                         required>
+                </div>
+                <div>
+                  <input class="form-input"
+                         type="tel"
+                         placeholder="Телефон"
+                         name="Телефон"
+                         data-validate="phone"
+                         required>
+                </div>
+                <div>
+                  @include('../../common/confirm-checkbox.html')
+                </div>
+              </div>
+              <button class="btn form__submit"
+                      type="submit">Заказать услугу</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
