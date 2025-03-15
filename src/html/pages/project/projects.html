@@ -1,0 +1,20 @@
+<section class="site__section">
+  <div class="container">
+    <section class="slider"
+             id="complete-projects">
+      <header class="slider__head">
+        <h2 class="h2 slider__title">Выполненные проекты</h2>
+      </header>
+      <div class="slider__wrapper swiper-wrapper">
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+        @include('../../common/product-slider-card.html', {title: 'Выполненный проект', img:'project.jpg', className:'swiper-slide', link: 'page-project.html'})
+      </div>
+      <div class="slider__pagination decorated-pagination">
+        @include('../../common/slider-control.html')
+      </div>
+    </section>
+  </div>
+</section>

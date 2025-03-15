@@ -1,0 +1,54 @@
+<section>
+  <div class="container pb-5 pt-xl-3 pb-xxl-6">
+    <h2 class="visually-hidden">Информация о проекте</h2>
+    <div class="row mb-lg-6">
+      <div class="col-12 col-md-6 col-xl-5 mb-4 mb-md-0">
+        @include('gallery.html')
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 offset-xl-1">
+        @include('meta.html')
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <section class="product-mk">
+          <h3 class="visually-hidden">Видео</h3>
+          <div class="mb-5 mb-xl-6">
+            <!-- Заменить элемент по ТЗ -->
+            <div class="temp-style-video">
+              <img src="img/mock/video-poster.jpg"
+                   alt="">
+            </div>
+          </div>
+          <h4 class="h2 product-mk__title">Другие видео</h4>
+          <ul class="product-mk__list product-mk__list--wide">
+            <li class="product-mk__item">
+              @include('../../common/video-card.html')
+            </li>
+            <li class="product-mk__item">
+              @include('../../common/video-card.html')
+            </li>
+            <li class="product-mk__item">
+              @include('../../common/video-card.html')
+            </li>
+            <li class="product-mk__item">
+              @include('../../common/video-card.html')
+            </li>
+            <li class="product-mk__item">
+              @include('../../common/video-card.html')
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <a class="h3 catalog-back-link mb-5"
+     href="page-projects.html">
+    <svg width="16"
+         height="16"
+         aria-hidden="true">
+      <use xlink:href="img/sprite.svg#back-url"></use>
+    </svg>
+    <span>Назад в раздел</span>
+  </a>
+</section>
