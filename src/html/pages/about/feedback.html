@@ -1,0 +1,46 @@
+<section class="half-cover"
+         id="order-block">
+  <div class="half-cover__part half-cover__part--decored">
+    <div class="half-cover__container half-cover__container--decored">
+      <div class="bordered-content half-cover__decor-content half-cover__decor-content--end">
+        <h2 class="h2 indent-reset mb-3">Остались вопросы?</h2>
+        <p class="indent-reset">Ответим на любые ваши вопросы</p>
+      </div>
+    </div>
+  </div>
+  <div class="half-cover__part half-cover__part--info">
+    <div class="half-cover__container">
+      <form class="bordered-content form"
+            id="ask-questions"
+            data-validate>
+        <p class="h3 form__title">Оставить заявку</p>
+        <input type="hidden"
+               name="Форма"
+               value="Остались вопросы">
+        <div class="form__fields">
+          <div>
+            <input class="form-input"
+                   name="Имя"
+                   type="text"
+                   placeholder="Ваше имя"
+                   data-validate="name"
+                   required>
+          </div>
+          <div>
+            <input class="form-input"
+                   type="tel"
+                   placeholder="Телефон"
+                   name="Телефон"
+                   data-validate="phone"
+                   required>
+          </div>
+          <div>
+            @include('../../common/confirm-checkbox.html')
+          </div>
+        </div>
+        <button class="btn form__submit"
+                type="submit">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+.about-advantages {
+  @include list-reset;
+
+  padding: 8px;
+  color: var(--gray-60);
+  display: grid;
+  row-gap: 32px;
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__num {
+    color: var(--gold);
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  @include media-min ($xl) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__num {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
