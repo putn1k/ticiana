@@ -1,0 +1,135 @@
+<section class="contacts pb-5 pb-xl-6">
+  <div class="container">
+    <h2 class="visually-hidden">Связь с нами</h2>
+    <div class="row">
+      <div class="col-12 col-xl-6 mb-4 mb-xl-0">
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d9978e70e752ef6a7db8d3155ddbce13724444db3ce8ef58e357f21ea9aacbc&amp;scroll=false&amp;source=constructor"
+                  width="100%"
+                  height="400"></iframe>
+        </div>
+      </div>
+      <div class="col-12 col-xl-6">
+        <ul class="contacts__list">
+          <li class="bordered-content showroom">
+            <header class="showroom__header">
+              <h4 class="h2 showroom__title">Шоурум</h4>
+              <p class="h4 showroom__schedule">пн-сб 10:00–19:00</p>
+            </header>
+            <footer class="showroom__footer">
+              <div class="showroom__contacts">
+                <span>ул. Пушкина, 43 </span>
+                <a href="tel:88412396829">8 (8412) 39-68-29</a>
+                <a href="mailto:mail@example.com">mail@example.com</a>
+              </div>
+              <ul class="showroom__icon-list">
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'tg'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'wa'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'vk'})
+                </li>
+              </ul>
+            </footer>
+          </li>
+          <li class="bordered-content showroom">
+            <header class="showroom__header">
+              <h4 class="h2 showroom__title">Шоурум</h4>
+              <p class="h4 showroom__schedule">пн-сб 10:00–19:00</p>
+            </header>
+            <footer class="showroom__footer">
+              <div class="showroom__contacts">
+                <span>ул. Пушкина, 43 </span>
+                <a href="tel:88412396829">8 (8412) 39-68-29</a>
+                <a href="mailto:mail@example.com">mail@example.com</a>
+              </div>
+              <ul class="showroom__icon-list">
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'tg'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'wa'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'vk'})
+                </li>
+              </ul>
+            </footer>
+          </li>
+          <li class="bordered-content showroom">
+            <header class="showroom__header">
+              <h4 class="h2 showroom__title">Шоурум</h4>
+              <p class="h4 showroom__schedule">пн-сб 10:00–19:00</p>
+            </header>
+            <footer class="showroom__footer">
+              <div class="showroom__contacts">
+                <span>ул. Пушкина, 43 </span>
+                <a href="tel:88412396829">8 (8412) 39-68-29</a>
+                <a href="mailto:mail@example.com">mail@example.com</a>
+              </div>
+              <ul class="showroom__icon-list">
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'tg'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'wa'})
+                </li>
+                <li>
+                  @include('../../common/icon-link.html', {icon: 'vk'})
+                </li>
+              </ul>
+            </footer>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="half-cover">
+  <div class="half-cover__part half-cover__part--decored">
+    <div class="half-cover__container half-cover__container--decored">
+      <div class="bordered-content half-cover__decor-content half-cover__decor-content--end">
+        <h2 class="h2 indent-reset mb-3">Заказать звонок</h2>
+        <p class="indent-reset">Оставьте заявку на обратный звонок</p>
+      </div>
+    </div>
+  </div>
+  <div class="half-cover__part half-cover__part--info">
+    <div class="half-cover__container">
+      <form class="bordered-content form"
+            id="order-callback"
+            data-validate>
+        <p class="h3 form__title">Заказать звонок</p>
+        <input type="hidden"
+               name="Форма"
+               value="Заказать звонок">
+        <div class="form__fields">
+          <div>
+            <input class="form-input"
+                   name="Имя"
+                   type="text"
+                   placeholder="Ваше имя"
+                   data-validate="name"
+                   required>
+          </div>
+          <div>
+            <input class="form-input"
+                   type="tel"
+                   placeholder="Телефон"
+                   name="Телефон"
+                   data-validate="phone"
+                   required>
+          </div>
+          <div>
+            @include('../../common/confirm-checkbox.html')
+          </div>
+        </div>
+        <button class="btn form__submit"
+                type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</section>

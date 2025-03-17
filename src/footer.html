@@ -1,5 +1,7 @@
 			</main>
-			@include('html/footer/index.html')
+			@if(context.page !== '404') {
+			   @include('html/footer/index.html')
+			}			
 		</div>
 	@include('html/service/scripts.html')
 	</body>

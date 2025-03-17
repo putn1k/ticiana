@@ -10,8 +10,10 @@
   <div inert=""
        id="site-top"></div>
   <div class="site__container">
+    @if(context.page !== '404') {
     @include('html/header/index.html')
-    <main class="site__content">
-      @if(context.page !== 'main') {
+    }
+    <main class="site__content@if(context.page === '404'){ content-404}">
+      @if(context.page !== 'main' && context.page !== '404') {
       @include('html/common/header-page.html', {page: '@title', bc: '@bc', cover: '@cover' })
       }
