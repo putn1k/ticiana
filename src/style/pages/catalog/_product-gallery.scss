@@ -39,6 +39,11 @@
     }
   }
 
+  @include media-min ($md) {
+    position: sticky;
+    top: 90px;
+  }
+
   @include media-min ($xl) {
     &__main {
       margin-bottom: 24px;
@@ -47,5 +52,9 @@
     &__thumb {
       padding-bottom: 11%;
     }
+  }
+
+  @include media-min ($xxl) {
+    top: 140px;
   }
 }
