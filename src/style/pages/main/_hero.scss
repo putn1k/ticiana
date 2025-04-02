@@ -59,19 +59,28 @@
 
   @include media-min ($xl) {
     &__slide {
-      min-height: 600px;
-      padding: 96px 0;
+      min-height: 700px;
     }
 
     &__wrapper {
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: flex-end;
     }
 
     &__title {
       margin: 0;
       margin-right: 30px;
+      line-height: 1.2;
+    }
+
+    &__descr {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__slide-btn {
+      align-self: flex-end;
     }
 
     &__controls {
@@ -90,8 +99,8 @@
 
   @include media-min ($xxl) {
     &__slide {
-      min-height: 900px;
-      padding: 124px 0;
+      min-height: 940px;
+      padding: 124px 0 190px;
     }
 
     &__title {
@@ -101,7 +110,6 @@
 
     &__text {
       max-width: 645px;
-      margin-bottom: 48px;
     }
 
     &__controls {
