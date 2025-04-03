@@ -13,7 +13,17 @@
       <div class="col-12">
         <section class="product-mk">
           <h3 class="visually-hidden">Видео</h3>
-          @include('../../common/temp-video.html')
+          <div class="py-4 py-md-5 py-xl-6">
+            <div class="video-container is-created">
+              <video width="100%"
+                     preload="metadata"
+                     poster="img/mock/video-temp.jpg"
+                     playsinline=""
+                     controls=""
+                     allow="clipboard-write; fullscreen; picture-in-picture">
+                <source src="media/video.mp4"></video>
+            </div>
+          </div>
           <h4 class="h2 product-mk__title">Другие видео</h4>
           <ul class="product-mk__list product-mk__list--wide">
             <li class="product-mk__item">

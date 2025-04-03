@@ -54,28 +54,3 @@ input[type='file'].visually-hidden {
 
   text-align: justify;
 }
-
-.temp-style-video {
-  padding: 32px 0;
-
-  & img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include media-min ($md) {
-    padding: 64px 0;
-  }
-
-  @include media-min ($xl) {
-    padding: 96px 0;
-
-    & img {
-      max-width: 960px;
-    }
-  }
-}

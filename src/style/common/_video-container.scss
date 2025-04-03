@@ -1,0 +1,96 @@
+.video-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--gold);
+  border-radius: 6px;
+
+  &.is-created {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  @include any-hover {
+    & img {
+      transition: transform var(--duration-slow) ease-in-out, opacity var(--duration-slow) ease-in-out;
+    }
+
+    &:hover {
+      & img {
+        transform: scale(1.05);
+        opacity: 0.7;
+      }
+
+      .video-container__btn {
+        &::before {
+          opacity: 0;
+        }
+
+        &::after {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  & img {
+    transform: scale(1.1);
+  }
+
+  & video,
+  & iframe,
+  & img {
+    display: block;
+    aspect-ratio: 4 / 3;
+    border: none;
+  }
+
+  & video,
+  & img {
+    width: 100%;
+  }
+
+  &--wide {
+
+    & video,
+    iframe {
+      aspect-ratio: 16 / 6;
+    }
+  }
+
+  &__btn {
+    @include btn-reset;
+
+    &::before {
+      @include full-size;
+
+      content: '';
+      background-image: radial-gradient(at center, rgba(38, 38, 38, 0.6), transparent 120px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      transition: opacity var(--duration-slow) ease-in-out;
+    }
+
+    &::after {
+      @include full-size;
+
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg width='47' height='47' viewBox='0 0 47 47' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.333333' y='0.666341' width='46' height='46' rx='23' stroke='%23E7D7B3' stroke-width='0.666667'/%3E%3Cpath d='M32.6009 22.5954C33.5771 22.9848 33.5771 24.3488 32.6009 24.7382L14.9426 31.7815C14.173 32.0884 13.333 31.5294 13.333 30.7101L13.333 16.6235C13.333 15.8042 14.173 15.2452 14.9426 15.5521L32.6009 22.5954Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-size: 70px 70px, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: scale(1.01);
+      transition: transform var(--duration-slow) ease-in-out;
+    }
+  }
+
+  @include media-min ($xl) {
+    max-width: 960px;
+  }
+}
