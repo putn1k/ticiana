@@ -1,3 +1,6 @@
+import baguetteBox from 'baguettebox.js';
+import SmoothScroll from 'smooth-scroll';
+
 import {
   smoothScrollConfig
 } from './configs.js';

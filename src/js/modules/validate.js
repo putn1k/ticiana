@@ -1,3 +1,5 @@
+import JustValidate from 'just-validate';
+
 import {
   validateConfig,
   requestsConfig

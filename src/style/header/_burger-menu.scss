@@ -20,7 +20,8 @@
     min-width: var(--min-site-width);
     z-index: 8;
     color: var(--white);
-    background-image: url('../img/covers/burger-menu-cover.jpg');
+    background-color: var(--gray-15);
+    background-image: var(--modal-bg-image, none);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

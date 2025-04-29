@@ -4,7 +4,7 @@
       <div class="site-header__inner">
         <div class="site-header__logo">
           <a href="page-main.html">
-            <img src="img/light-logo.png"
+            <img src="assets/img/light-logo.png"
                  width="110"
                  height="50"
                  alt="Ticiana deluxe">
@@ -43,7 +43,7 @@
               <svg width="24"
                    height="24"
                    aria-hidden="true">
-                <use xlink:href="img/sprite.svg#lense"></use>
+                <use xlink:href="assets/img/sprite.svg#lense"></use>
               </svg>
             </button>
             <div class="site-header__search-form">
@@ -60,7 +60,8 @@
     </div>
   </div>
   <div class="burger-menu d-xl-none">
-    <div class="burger-menu__inner">
+    <div class="burger-menu__inner"
+         style="--modal-bg-image: url('../assets/img/mock/burger-menu-cover.jpg')">
       <div class="container">
         @include('search-form.html', {className: 'burger-menu__search'})
         <nav class="burger-menu__nav">

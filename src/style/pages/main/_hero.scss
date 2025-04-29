@@ -66,17 +66,20 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-end;
+      width: 100%;
     }
 
     &__title {
       margin: 0;
       margin-right: 30px;
       line-height: 1.2;
+      align-self: flex-start;
     }
 
     &__descr {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
     }
 
     &__slide-btn {

@@ -1,3 +1,8 @@
+import Swiper from 'swiper';
+import {
+  Navigation,
+  EffectFade,
+} from 'swiper/modules';
 import {
   sliderConfig
 } from './configs.js';
@@ -46,7 +51,9 @@ const initModal = ( name, handler = 'data-hystmodal' ) => {
 };
 
 const initSlider = ( name, options = {} ) => {
-  const defaultConfig = Object.assign( {}, sliderConfig.default );
+  const defaultConfig = Object.assign( {}, {
+    modules: [ Navigation, EffectFade ],
+  }, sliderConfig.default );
   const customConfig = Object.assign( defaultConfig, options );
 
   if ( typeof name === 'string' ) {

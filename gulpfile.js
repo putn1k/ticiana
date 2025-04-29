@@ -4,8 +4,7 @@ import cleanBuildFolder from './inc/clean.mjs';
 import copyAssets from './inc/assets.mjs';
 import compileHTML from './inc/html.mjs';
 import compileStaticHTML from './inc/html-static.mjs';
-import compileCSS from './inc/css.mjs';
-import compileJS from './inc/js.mjs';
+import processWebpack from './inc/webpack.mjs';
 import {
   copyRasterGraphics,
   copyVectorGraphics,
@@ -24,7 +23,6 @@ const refreshServer = ( done ) => {
   BS_SERVER.reload();
   done();
 };
-const streamServer = () => compileCSS().pipe( BS_SERVER.stream() );
 
 const syncServer = () => {
   BS_SERVER.init( {
@@ -34,11 +32,12 @@ const syncServer = () => {
     notify: false,
     ui: false,
   } );
-  watch( [ './src/*.html', './src/html/**/*.html' ], series( compileHTML, refreshServer ) );
-  watch( './src/style/**/*.scss', series( compileCSS, streamServer ) );
-  watch( './src/js/**/*.js', series( compileJS, refreshServer ) );
+  watch( './src/vendor/', series( processWebpack, refreshServer ) );
   watch( './src/assets/', series( copyAssets, refreshServer ) );
-  watch( './src/vendor/', series( compileCSS, compileJS, refreshServer ) );
+  watch( [ './src/*.html', './src/html/**/*.html' ], series( compileHTML, refreshServer ) );
+  watch( './src/style/**/*.scss', series( processWebpack, refreshServer ) );
+  watch( './src/js/**/*.js', series( processWebpack, refreshServer ) );
+  watch( [ './src/img/static/**.{jpg,jpeg,png,svg,gif,webp}' ], series( processWebpack, refreshServer ) );
   watch( [ './src/img/**/**.{jpg,jpeg,png,gif,webp}' ], series( copyRasterGraphics, refreshServer ) );
   watch( [ './src/img/**/**.svg', '!./src/img/sprite/**.svg' ], series( copyVectorGraphics, refreshServer ) );
   watch( './src/img/sprite/**.svg', series( compileSprite, refreshServer ) );
@@ -47,8 +46,7 @@ const syncServer = () => {
 const processBuild = parallel(
   copyAssets,
   compileHTML,
-  compileCSS,
-  compileJS,
+  processWebpack,
   copyRasterGraphics,
   copyVectorGraphics,
   compileSprite,
@@ -57,8 +55,7 @@ const processBuild = parallel(
 const processStaticBuild = parallel(
   copyAssets,
   compileStaticHTML,
-  compileCSS,
-  compileJS,
+  processWebpack,
   copyRasterGraphics,
   copyVectorGraphics,
   compileSprite,
