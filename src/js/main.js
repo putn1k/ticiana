@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import 'swiper/css/thumbs';
+import 'aos/dist/aos.css';
 import '../style/main.scss';
 
 import {

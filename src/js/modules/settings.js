@@ -1,5 +1,6 @@
 import baguetteBox from 'baguettebox.js';
 import SmoothScroll from 'smooth-scroll';
+import AOS from 'aos';
 
 import {
   smoothScrollConfig
@@ -38,6 +39,10 @@ const initSiteSettings = () => {
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
   initProductFilters();
   initSiteVideo();
+  AOS.init( {
+    duration: 600,
+    easing: 'ease-out'
+  } );
 };
 
 export {
