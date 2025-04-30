@@ -5,15 +5,18 @@
       <div class="col-12 col-md-6 col-xl-5 mb-4 mb-md-0">
         @include('gallery.html')
       </div>
-      <div class="col-12 col-md-6 col-xl-6 offset-xl-1">
+      <div class="col-12 col-md-6 col-xl-6 offset-xl-1 is-ovh">
         @include('meta.html')
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <section class="product-mk">
-          <h3 class="visually-hidden">Видео</h3>
-          <div class="py-4 py-md-5 py-xl-6">
+        <section class="product-mk is-ovh">
+          <h3 class="visually-hidden"
+              data-aos="fade">Видео</h3>
+          <div class="py-4 py-md-5 py-xl-6"
+               data-aos="fade-up"
+               data-aos-delay="150">
             <div class="video-container is-created">
               <video width="100%"
                      preload="metadata"
@@ -24,24 +27,27 @@
                 <source src="assets/media/video.mp4"></video>
             </div>
           </div>
-          <h4 class="h2 product-mk__title">Другие видео</h4>
-          <ul class="product-mk__list product-mk__list--wide">
-            <li class="product-mk__item">
-              @include('../../common/video-card.html')
-            </li>
-            <li class="product-mk__item">
-              @include('../../common/video-card.html')
-            </li>
-            <li class="product-mk__item">
-              @include('../../common/video-card.html')
-            </li>
-            <li class="product-mk__item">
-              @include('../../common/video-card.html')
-            </li>
-            <li class="product-mk__item">
-              @include('../../common/video-card.html')
-            </li>
-          </ul>
+          <div data-aos="fade-up"
+               data-aos-delay="150">
+            <h4 class="h2 product-mk__title">Другие видео</h4>
+            <ul class="product-mk__list product-mk__list--wide">
+              <li class="product-mk__item">
+                @include('../../common/video-card.html')
+              </li>
+              <li class="product-mk__item">
+                @include('../../common/video-card.html')
+              </li>
+              <li class="product-mk__item">
+                @include('../../common/video-card.html')
+              </li>
+              <li class="product-mk__item">
+                @include('../../common/video-card.html')
+              </li>
+              <li class="product-mk__item">
+                @include('../../common/video-card.html')
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
