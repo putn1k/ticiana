@@ -1,0 +1,10 @@
+import 'normalize.css';
+import 'baguettebox.js/dist/baguetteBox.min.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+import 'swiper/css/thumbs';
+import 'hystmodal/css';
+import 'aos/dist/aos.css';
+import 'justtabs/dist/just-tabs.min.css';
+import '../../style/main.scss';

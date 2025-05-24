@@ -1,3 +1,4 @@
+import HystModal from 'hystmodal';
 import {
   modalConfig,
 } from './configs.js';

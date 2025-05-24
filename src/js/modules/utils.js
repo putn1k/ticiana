@@ -3,6 +3,7 @@ import {
   Navigation,
   EffectFade,
 } from 'swiper/modules';
+import JustTabs from 'justtabs';
 import {
   sliderConfig
 } from './configs.js';

@@ -1,3 +1,5 @@
+import SmoothScroll from 'smooth-scroll';
+
 import {
   smoothScrollConfig,
   observerConfig,
