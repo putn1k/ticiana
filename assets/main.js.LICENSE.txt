@@ -6,3 +6,9 @@
  */
 
 /*! smooth-scroll v16.1.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+
+/**
+ * tua-body-scroll-lock v1.5.3
+ * (c) 2024 Evinma, BuptStEve
+ * @license MIT
+ */
