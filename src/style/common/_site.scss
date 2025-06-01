@@ -11,6 +11,12 @@
 
   &__content {
     flex-grow: 1;
+
+    &--gradient {
+      color: var(--white);
+      background-color: var(--gray-40);
+      background-image: linear-gradient(to right, var(--black) 0%, var(--gray-40) 100%);
+    }
   }
 
   &__section {

@@ -8,6 +8,9 @@ const OPEN_MENU_CLASSNAME = 'site-header__search-form--show';
 
 const toggleSearchForm = () => {
   searchForm.classList.toggle( OPEN_MENU_CLASSNAME );
+  if ( searchForm.classList.contains( OPEN_MENU_CLASSNAME ) ) {
+    searchForm.querySelector( '[type="search"]' ).focus();
+  }
 };
 
 const hideSearchForm = () => {
@@ -17,6 +20,7 @@ const hideSearchForm = () => {
 const onEscKeydown = ( evt ) => {
   if ( searchForm.classList.contains( OPEN_MENU_CLASSNAME ) && isEscKey( evt ) ) {
     hideSearchForm();
+    searchTrigger.focus();
   }
 };
 

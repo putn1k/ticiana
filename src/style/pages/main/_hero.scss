@@ -5,9 +5,10 @@
 
   &__slide {
     position: relative;
-    min-height: 735px;
     display: flex;
-    padding: 132px 0;
+    padding: 96px 0 160px;
+    min-height: 435px;
+    height: calc(100 * var(--vh, 1vh));
 
     &::before {
       @include full-size;
@@ -36,88 +37,72 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 32px;
-    width: 100%;
-    max-width: 540px;
-  }
-
-  &__text {
-    margin: 0;
-    margin-bottom: 32px;
-    font-weight: 400;
-    width: 100%;
-    max-width: 540px;
+    font-size: 42px;
+    line-height: 0.9;
+    text-transform: uppercase;
   }
 
   &__controls {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 3;
   }
 
   @include media-min ($xl) {
     &__slide {
-      min-height: 700px;
+      min-height: 600px;
+      height: auto;
+      padding: 196px 0;
     }
 
-    &__wrapper {
-      display: flex;
+    &__content {
+      position: relative;
       justify-content: flex-start;
-      align-items: flex-end;
-      width: 100%;
+      padding-left: 290px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: -196px;
+        width: 255px;
+        height: 476px;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+      }
     }
 
     &__title {
-      margin: 0;
-      margin-right: 30px;
-      line-height: 1.2;
-      align-self: flex-start;
-    }
-
-    &__descr {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    &__slide-btn {
-      align-self: flex-end;
+      font-size: 64px;
     }
 
     &__controls {
-      bottom: 20px;
-      opacity: 0.6;
-
-      @include any-hover {
-        transition: opacity var(--duration-default) ease-in-out;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
+      bottom: 60px;
+      transform: translateX(280px);
     }
   }
 
   @include media-min ($xxl) {
     &__slide {
-      min-height: 940px;
-      padding: 124px 0 190px;
+      min-height: 900px;
+      padding: 256px 0 196px;
+    }
+
+    &__content {
+      padding-left: 405px;
+
+      &::before {
+        top: -256px;
+        width: 375px;
+        height: 700px;
+      }
     }
 
     &__title {
-      max-width: 915px;
-      padding-right: 132px;
-    }
-
-    &__text {
-      max-width: 645px;
+      font-size: 96px;
     }
 
     &__controls {
-      bottom: 40px;
-      opacity: 0.6;
+      transform: translateX(395px);
     }
   }
 }

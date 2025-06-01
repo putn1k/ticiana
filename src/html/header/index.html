@@ -34,14 +34,14 @@
                   stroke-linecap="round" />
           </svg>
         </button>
-        <div class="d-none d-xl-flex site-header__desktop-content">
+        <div class="site-header__desktop-content">
           <nav class="site-header__nav">
             @include('menu-list.html')
           </nav>
           <div class="site-header__search">
             <button class="btn-reset site-header__search-trigger">
-              <svg width="24"
-                   height="24"
+              <svg width="16"
+                   height="16"
                    aria-hidden="true">
                 <use xlink:href="assets/img/sprite.svg#lense"></use>
               </svg>
@@ -50,10 +50,8 @@
               @include('search-form.html')
             </div>
           </div>
-          <div class="site-header__contacts-wrapper">
-            <div class="site-header__contacts site-header__contacts--has-items">
-              @include('phone-list.html')
-            </div>
+          <div class="site-header__contacts site-header__contacts--has-items">
+            @include('phone-list.html')
           </div>
         </div>
       </div>

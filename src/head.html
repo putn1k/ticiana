@@ -13,7 +13,7 @@
     @if(context.page !== '404') {
     @include('html/header/index.html')
     }
-    <main class="site__content@if(context.page === '404'){ content-404}">
+    <main class="site__content@if(context.page === '404'){ content-404}@if(context.page === 'main'){ site__content--gradient}">
       @if(context.page !== 'main' && context.page !== '404') {
       @include('html/common/header-page.html', {page: '@title', bc: '@bc', cover: '@cover' })
       }
